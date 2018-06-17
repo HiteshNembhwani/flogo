@@ -24,6 +24,8 @@ Steps to deploy:
 
 * Make sure the app is executable: `chmod +x <appname>`
 * Push to PCF: `cf push <name in pcf> -c './<appname>' -b binary_buildpack`
+* For PCF 2.0 environment, the app should be linux 386 compatible. 
+* Example: cf push flogoapp -c ‘./routing-api_linux_386’ -b binary_buildpack
 
 For more detailed information and more flags you can set during deployments, check [Binary Buildpack](https://docs.cloudfoundry.org/buildpacks/binary/index.html) in the Cloud Foundry docs.
 
